@@ -3,17 +3,18 @@ package com.epam.loops;
 public class Power {
 
     public void printPower(int numberToPrint, int power) {
+        int result = 1;
         if(power == 0)
-            numberToPrint = 1;
+            result = 1;
 
-        else if(power>0){
-            for(; power > 1; power-- ){
-                numberToPrint *=numberToPrint;
+        while(power>0){
+            result *= numberToPrint;
+            --power;
         }
-            }
-        System.out.print(numberToPrint);
 
-        }
+        System.out.print(result);
+
+    }
 
     public static void main(String[] args) {
         new Power().printPower(10, 3);
