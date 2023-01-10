@@ -24,7 +24,7 @@ public class ArrayTasks {
      */
     public int[] generateNumbers(int length) {
         if(length <= 0)
-            return null;
+            return new int[]{0};
         else {
         int[] numbersArray = new int[length];
         for(int i = 0; i< length; i++)

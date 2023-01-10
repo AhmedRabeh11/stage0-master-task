@@ -7,7 +7,7 @@ public class Bird extends Animal {
 
     @Override
     public String getDescription(){
-        String statement = super.getDescription() + " This animal is mostly blue. It has 2 paws and no fur. Moreover, it has 2 wings and can fly.";
+        String statement = "This animal is mostly blue. It has 2 paws and no fur. Moreover, it has 2 wings and can fly.";
         return statement;
     }
 }
