@@ -3,15 +3,27 @@ package com.epam.loops;
 public class HalfPyramid {
 
     public void printHalfPyramid(int cathetusLength) {
-        for (int i = 0; i < cathetusLength; i++) {
-            for(int j = cathetusLength; j > i + 1; j--)
+        int i, j;
+
+
+        for(i=0; i<cathetusLength; i++)
+        {
+
+
+            for(j=2*(cathetusLength-i); j>=0; j--)
+            {
+                // printing spaces
                 System.out.print(" ");
-            // Print out the asterisks in the row
-            for (int j = 0; j <= i; j++) {
-                System.out.print("* ");
             }
 
-            // Move to the next line
+
+            for(j=0; j<=i; j++)
+            {
+                // printing stars
+                System.out.print(" *");
+            }
+
+            // ending line after each row
             System.out.println();
         }
     }
