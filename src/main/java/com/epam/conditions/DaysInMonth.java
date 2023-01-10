@@ -10,7 +10,7 @@ public class DaysInMonth {
         else{
             switch (month) {
                 case 2:{
-                    if ((year % 4 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 != 0)) {
+                    if ((year % 4 == 0 && year % 100 != 0) || ((year % 4 == 0 && year % 100 == 0 )&& year % 400 == 0)) {
                         numberOfDays = 29;
                     } else {
                         numberOfDays = 28;
@@ -32,8 +32,8 @@ public class DaysInMonth {
                 default:
                     break;
             }
+            System.out.println(numberOfDays);
         }
-        System.out.println(numberOfDays);
     }
 
 

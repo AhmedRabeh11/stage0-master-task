@@ -12,7 +12,7 @@ public class Power {
             --power;
         }
 
-        System.out.print(result);
+        System.out.println(result);
 
     }
 

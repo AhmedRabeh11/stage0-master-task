@@ -5,6 +5,7 @@ public class SeasonDeterminer {
     public void tellTheSeason(int monthNumber) {
         if(monthNumber == 0 || monthNumber > 12)
             System.out.println("Wrong month number");
+        else{
 
         switch (monthNumber) {
             case 3:
@@ -38,6 +39,7 @@ public class SeasonDeterminer {
             default:
                 System.out.println("Winter");
                 break;
+        }
         }
 
     }

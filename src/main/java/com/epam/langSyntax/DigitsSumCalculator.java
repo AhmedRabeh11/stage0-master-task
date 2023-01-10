@@ -7,7 +7,7 @@ public class DigitsSumCalculator {
             sum += (number%10);
             number /= 10;
         }
-        System.out.print(sum);
+        System.out.println(sum);
     }
 
 }
