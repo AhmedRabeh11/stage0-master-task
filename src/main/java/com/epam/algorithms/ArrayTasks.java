@@ -129,13 +129,13 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
         for (int i = 1; i < arr.length; i++) {
-            int keyLength = arr[i].length;
-            int j = i - 1;
-            while (j >= 0 && keyLength < arr[j].length) {
-                arr[j + 1] = arr[j];
-                j = j - 1;
+            int j = i;
+            while (j > 0 && arr[j].length < arr[j-1].length) {
+                int[] temp = arr[j];
+                arr[j] = arr[j-1];
+                arr[j-1] = temp;
+                j--;
             }
-            arr[j + 1] = new int[keyLength];
         }
 
         // Implementing the insertion sort on the elements of the sub arrays
@@ -147,9 +147,9 @@ public class ArrayTasks {
                     arr[i][k + 1] = arr[i][k];
                     k = k - 1;
                 }
-    }
-
-}
+                arr[i][k + 1] = key;
+            }
+        }
         return arr;
     }
 }
